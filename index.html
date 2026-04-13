@@ -907,91 +907,141 @@
             </div>
         </div>
         
-        <!-- Classic Testimonials Section -->
-        <section class="py-20 bg-white">
+        <!-- Testimonials Carousel Section -->
+        <section class="py-20 bg-gray-100">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-16">
+                <div class="text-center mb-12">
                     <div class="inline-flex items-center bg-primary-red/10 border border-primary-red/20 rounded-full px-6 py-3 mb-6">
                         <i class="fas fa-quote-left text-primary-red mr-2"></i>
-                        <span class="text-sm font-bold text-primary-red uppercase tracking-wider">Testimonials</span>
+                        <span class="text-sm font-bold text-primary-red uppercase tracking-wider">Client Reviews</span>
                     </div>
                     <h2 class="text-3xl md:text-5xl font-bold mb-4 serif text-dark-blue">What Our Clients Say</h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">
-                        Real stories from real customers across Florida. Join thousands of satisfied clients who trust FreedmanBroker Insurance.
+                        Real stories from real customers across Florida
                     </p>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Testimonial 1 -->
-                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 relative">
-                        <i class="fas fa-quote-left text-4xl text-primary-red/20 absolute top-6 left-6"></i>
-                        <div class="pt-8">
+                <div class="relative">
+                    <div id="testimonialCarousel" class="flex gap-6 overflow-x-auto pb-4 scroll-smooth" style="scroll-behavior: smooth;">
+                        <!-- Testimonial 1 -->
+                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
                             <div class="flex text-yellow-400 mb-4">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                             <p class="text-gray-600 italic mb-6 leading-relaxed">
                                 "FreedmanBroker Insurance saved me hundreds of dollars! The agent was patient, professional, and found me an amazing rate. Highly recommend!"
                             </p>
-                            <div class="flex items-center border-t border-gray-200 pt-4">
+                            <div class="flex items-center border-t border-gray-100 pt-4">
                                 <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">JD</div>
                                 <div>
                                     <div class="font-bold text-dark-blue">John D.</div>
                                     <div class="text-xs text-gray-500">Tampa, FL</div>
                                 </div>
-                                <div class="ml-auto text-primary-red">
-                                    <i class="fas fa-star text-xs"></i>
-                                    <span class="text-xs font-bold">5.0</span>
-                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Testimonial 2 -->
-                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 relative">
-                        <i class="fas fa-quote-left text-4xl text-primary-red/20 absolute top-6 left-6"></i>
-                        <div class="pt-8">
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
                             <div class="flex text-yellow-400 mb-4">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                             <p class="text-gray-600 italic mb-6 leading-relaxed">
                                 "Been with them for 5 years. Always great rates and excellent customer service. They really care about their clients!"
                             </p>
-                            <div class="flex items-center border-t border-gray-200 pt-4">
+                            <div class="flex items-center border-t border-gray-100 pt-4">
                                 <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">MS</div>
                                 <div>
                                     <div class="font-bold text-dark-blue">Mary S.</div>
                                     <div class="text-xs text-gray-500">Orlando, FL</div>
                                 </div>
-                                <div class="ml-auto text-primary-red">
-                                    <i class="fas fa-star text-xs"></i>
-                                    <span class="text-xs font-bold">5.0</span>
-                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Testimonial 3 -->
-                    <div class="bg-gray-50 rounded-xl p-8 border border-gray-100 relative">
-                        <i class="fas fa-quote-left text-4xl text-primary-red/20 absolute top-6 left-6"></i>
-                        <div class="pt-8">
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
                             <div class="flex text-yellow-400 mb-4">
                                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             </div>
                             <p class="text-gray-600 italic mb-6 leading-relaxed">
                                 "Smooth process getting my business insurance. The agent explained everything clearly. Will definitely use again!"
                             </p>
-                            <div class="flex items-center border-t border-gray-200 pt-4">
+                            <div class="flex items-center border-t border-gray-100 pt-4">
                                 <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">RJ</div>
                                 <div>
                                     <div class="font-bold text-dark-blue">Robert J.</div>
                                     <div class="text-xs text-gray-500">Miami, FL</div>
                                 </div>
-                                <div class="ml-auto text-primary-red">
-                                    <i class="fas fa-star text-xs"></i>
-                                    <span class="text-xs font-bold">5.0</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 4 -->
+                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 italic mb-6 leading-relaxed">
+                                "When my roof was damaged in a storm, they handled the claim incredibly fast. So grateful to have an agency that actually cares!"
+                            </p>
+                            <div class="flex items-center border-t border-gray-100 pt-4">
+                                <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">EW</div>
+                                <div>
+                                    <div class="font-bold text-dark-blue">Emily W.</div>
+                                    <div class="text-xs text-gray-500">Jacksonville, FL</div>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!-- Testimonial 5 -->
+                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 italic mb-6 leading-relaxed">
+                                "Bundled auto and home insurance and saved over $400/year! Great service and always available when I need them."
+                            </p>
+                            <div class="flex items-center border-t border-gray-100 pt-4">
+                                <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">DB</div>
+                                <div>
+                                    <div class="font-bold text-dark-blue">David B.</div>
+                                    <div class="text-xs text-gray-500">Fort Lauderdale, FL</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 6 -->
+                        <div class="min-w-[300px] md:min-w-[400px] bg-white p-8 rounded-xl shadow-md border border-gray-200 flex-shrink-0">
+                            <div class="flex text-yellow-400 mb-4">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-600 italic mb-6 leading-relaxed">
+                                "First time buying home insurance and they made it so easy! Got a great rate and the process was smooth."
+                            </p>
+                            <div class="flex items-center border-t border-gray-100 pt-4">
+                                <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">ST</div>
+                                <div>
+                                    <div class="font-bold text-dark-blue">Sarah T.</div>
+                                    <div class="text-xs text-gray-500">Sarasota, FL</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation buttons -->
+                    <button id="prevTestimonial" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 text-dark-blue hover:bg-dark-blue hover:text-white transition flex items-center justify-center z-10">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="nextTestimonial" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 w-12 h-12 rounded-full bg-white shadow-lg border border-gray-200 text-dark-blue hover:bg-dark-blue hover:text-white transition flex items-center justify-center z-10">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="text-center mt-10">
+                    <div class="inline-flex items-center bg-dark-blue text-white px-6 py-3 rounded-lg">
+                        <i class="fab fa-google mr-3"></i>
+                        <span class="font-bold">4.9/5</span>
+                        <span class="text-gray-300 mx-2">from</span>
+                        <span class="font-bold">10,000+</span>
+                        <span class="text-gray-300 ml-1">Google Reviews</span>
                     </div>
                 </div>
             </div>
@@ -1305,6 +1355,23 @@ document.querySelectorAll('.faq-btn').forEach(btn => {
         icon.classList.toggle('rotate-180');
     });
 });
+
+// Testimonial Carousel
+const testimonialCarousel = document.getElementById('testimonialCarousel');
+const prevTestimonial = document.getElementById('prevTestimonial');
+const nextTestimonial = document.getElementById('nextTestimonial');
+
+if (testimonialCarousel && prevTestimonial && nextTestimonial) {
+    const scrollAmount = 430;
+    
+    nextTestimonial.addEventListener('click', () => {
+        testimonialCarousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+    
+    prevTestimonial.addEventListener('click', () => {
+        testimonialCarousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+}
 </script>
 
     <div id="footer-container"></div>
