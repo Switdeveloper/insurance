@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Insurance in Florida - FreedmanBrokerInsurance</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-blue': '#0d152e',
+                        'primary-red': '#c91414',
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; color: #333; }
+        body { font-family: 'Inter', sans-serif; color: #333; margin: 0; padding: 0; }
         h1, h2, h3, h4, h5, h6, .serif { font-family: 'Playfair Display', serif; }
-        .bg-dark-blue { background-color: #0d152e; }
-        .text-dark-blue { color: #0d152e; }
-        .bg-primary-red { background-color: #c91414; }
-        .text-primary-red { color: #c91414; }
     </style>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <script src="js/load-partials.js"></script>
@@ -163,7 +175,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
             <!-- Card 1 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition duration-300">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
@@ -178,7 +190,7 @@
             </div>
 
             <!-- Card 2 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition duration-300">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
@@ -195,7 +207,7 @@
             </div>
 
             <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition duration-300">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
@@ -210,7 +222,7 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition duration-300">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
@@ -225,7 +237,7 @@
             </div>
 
             <!-- Card 5 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition duration-300">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1468245856972-a0333f3f8293?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
@@ -240,7 +252,7 @@
             </div>
 
             <!-- Card 6 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition duration-300">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
@@ -255,7 +267,7 @@
             </div>
 
             <!-- Card 7 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition duration-300">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
@@ -270,7 +282,7 @@
             </div>
 
             <!-- Card 8 -->
-            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition duration-300">
                 <div class="relative h-48 overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=500&h=300&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                     <div class="absolute top-3 left-3 w-8 h-8 bg-white rounded-full flex items-center justify-center text-primary-red shadow">
@@ -1044,6 +1056,8 @@
     </div>
 </section>
 
+
+
 <!-- Testimonials Section -->
 <section class="py-16 md:py-24 bg-dark-blue text-white">
     <div class="max-w-7xl mx-auto px-4 text-center">
@@ -1076,33 +1090,67 @@
 </section>
 
 <!-- FAQ Section -->
-<section class="py-16 md:py-24 bg-gray-50">
+<section class="py-20 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-8 serif text-center">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-                <h3 class="font-bold text-lg mb-2">What does home insurance cover in Florida?</h3>
-                <p class="text-gray-600">Florida home insurance typically covers dwelling, personal property, liability, and additional living expenses. It protects against fires, storms, theft, and other covered perils. Note: Flood damage requires separate flood insurance.</p>
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark-blue serif">Frequently Asked Questions</h2>
+            <p class="text-gray-600">Get answers to the most common questions about home insurance in Florida.</p>
+        </div>
+
+        <div class="space-y-4" id="faqContainer">
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
+                    <span>What does a standard home insurance policy cover in Florida?</span>
+                    <i class="fas fa-plus text-primary-red faq-icon"></i>
+                </button>
+                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200 leading-relaxed">
+                    A standard policy typically covers your home's structure, personal belongings, liability protection, and additional living expenses if your home becomes uninhabitable. Note that flood insurance is usually separate.
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-                <h3 class="font-bold text-lg mb-2">How much is home insurance in Florida?</h3>
-                <p class="text-gray-600">The average home insurance in Florida is $2,500-$4,000 per year, but rates vary based on your home's value, location, age, and coverage levels. Factors like proximity to the coast and hurricane risk affect pricing.</p>
+
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
+                    <span>Is hurricane insurance included in my policy?</span>
+                    <i class="fas fa-plus text-gray-400 faq-icon"></i>
+                </button>
+                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200 leading-relaxed">
+                    Most Florida homeowners policies include windstorm and hurricane coverage, but it often comes with a separate hurricane deductible (typically 2%, 5%, or 10% of your dwelling coverage limit).
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-                <h3 class="font-bold text-lg mb-2">Do I need flood insurance in Florida?</h3>
-                <p class="text-gray-600">Standard home insurance doesn't cover flood damage. Florida has a high flood risk, so we strongly recommend flood insurance through the National Flood Insurance Program (NFIP) or private carriers, regardless of your location.</p>
+
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
+                    <span>Do I need flood insurance if I'm not in a high-risk zone?</span>
+                    <i class="fas fa-plus text-gray-400 faq-icon"></i>
+                </button>
+                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200 leading-relaxed">
+                    Yes, it's highly recommended. Over 20% of flood claims come from properties outside high-risk flood zones. Standard home insurance does NOT cover flood damage.
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-                <h3 class="font-bold text-lg mb-2">Can I bundle auto and home insurance?</h3>
-                <p class="text-gray-600">Yes! Bundling your auto and home insurance typically saves 10-20% on your premiums. We can help you find the best combination of coverage at the lowest price.</p>
+
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
+                    <span>How can I lower my home insurance premiums?</span>
+                    <i class="fas fa-plus text-gray-400 faq-icon"></i>
+                </button>
+                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200 leading-relaxed">
+                    You can lower premiums by installing wind mitigation features (like hurricane shutters or impact windows), upgrading your roof, installing security systems, increasing your deductible, or bundling with your auto insurance.
+                </div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-                <h3 class="font-bold text-lg mb-2">What is replacement cost vs. actual cash value?</h3>
-                <p class="text-gray-600">Replacement cost pays to rebuild your home or replace items at current market value. Actual cash value pays depreciated value. Replacement cost coverage is more expensive but provides better protection.</p>
+
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+                <button class="faq-btn w-full flex justify-between items-center p-5 bg-white font-bold text-gray-800 hover:bg-gray-50 transition focus:outline-none">
+                    <span>Can I bundle auto and home insurance?</span>
+                    <i class="fas fa-plus text-gray-400 faq-icon"></i>
+                </button>
+                <div class="faq-content hidden p-5 bg-white text-gray-600 text-sm border-t border-gray-200 leading-relaxed">
+                    Absolutely! Bundling your auto and home insurance can save you significantly on both policies. Contact one of our agents to see how much you could save.
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Footer Area (Includes Contact Form block + Footer links) -->
 <footer class="bg-[#050a17] text-white">
@@ -1204,98 +1252,7 @@
         </div>
     </div>
 
-    <!-- Main Footer Links -->
-    <div class="max-w-7xl mx-auto px-4 pb-12 pt-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 border-b border-gray-800 pb-12">
-            <!-- Brand -->
-            <div class="lg:col-span-2 pr-8">
-                <div class="flex items-center mb-6">
-                    <div class="w-8 h-8 bg-white flex items-center justify-center mr-2 border border-gray-300 rounded-sm">
-                        <span class="text-[8px] font-bold text-gray-900">LOGO</span>
-                    </div>
-                    <span class="font-bold text-xl serif text-white">FreedmanBrokerInsurance</span>
-                </div>
-                <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                    FreedmanBrokerInsurance Insurance is a premier independent insurance agency. We partner with top-rated carriers to provide comprehensive coverage solutions for individuals, families, and businesses across the Southeast.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary-red hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary-red hover:text-white transition"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary-red hover:text-white transition"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary-red hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
 
-            <!-- Quick Links -->
-            <div>
-                <h4 class="font-bold text-lg mb-6 serif text-gray-200">Insurance</h4>
-                <ul class="space-y-3 text-sm text-gray-400">
-                    <li><a href="auto-insurance.html" class="hover:text-primary-red transition">Auto Insurance</a></li>
-                    <li><a href="home-insurance.html" class="hover:text-primary-red transition">Home Insurance</a></li>
-            <a href="life-insurance.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Life Insurance</a>
-            <a href="business-insurance.html" class="text-sm font-semibold text-gray-800 hover:text-primary-red">Business Insurance</a>
-                    <li><a href="#" class="hover:text-primary-red transition">Renters Insurance</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Condo Insurance</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Flood Insurance</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Commercial Insurance</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Boat Insurance</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Life Insurance</a></li>
-                </ul>
-            </div>
-
-            <!-- Company -->
-            <div>
-                <h4 class="font-bold text-lg mb-6 serif text-gray-200">Company</h4>
-                <ul class="space-y-3 text-sm text-gray-400">
-                    <li><a href="#" class="hover:text-primary-red transition">About Us</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Locations</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Careers</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Testimonials</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Franchise Opportunities</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Contact Us</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Blog</a></li>
-                </ul>
-            </div>
-
-            <!-- Support -->
-            <div>
-                <h4 class="font-bold text-lg mb-6 serif text-gray-200">Support</h4>
-                <ul class="space-y-3 text-sm text-gray-400">
-                    <li><a href="#" class="hover:text-primary-red transition">File a Claim</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Make a Payment</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Client Portal</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">FAQ</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Terms of Service</a></li>
-                    <li><a href="#" class="hover:text-primary-red transition">Accessibility</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-            <p>&copy; 2024 FreedmanBrokerInsurance Insurance. All Rights Reserved.</p>
-            <p class="mt-4 md:mt-0">Designed and Built for Florida.</p>
-        </div>
-    </div>
-</footer> -->
-
-<script>
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        const icon = mobileMenuBtn.querySelector('i');
-        if (mobileMenu.classList.contains('hidden')) {
-            icon.className = 'fas fa-bars';
-        } else {
-            icon.className = 'fas fa-times';
-        }
-    });
-}
-</script>
 
     <div id="footer-container"></div>
 </body>

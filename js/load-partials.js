@@ -33,3 +33,51 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 });
+// Initialize FAQ Accordions if they exist on the page
+function initFAQ() {
+    const faqBtns = document.querySelectorAll('.faq-btn');
+    if (faqBtns.length === 0) return;
+
+    faqBtns.forEach(btn => {
+        // Prevent multiple listeners
+        const newBtn = btn.cloneNode(true);
+        btn.parentNode.replaceChild(newBtn, btn);
+
+        newBtn.addEventListener('click', () => {
+            const content = newBtn.nextElementSibling;
+            const icon = newBtn.querySelector('.faq-icon');
+
+            // Close all other FAQs
+            const allBtns = document.querySelectorAll('.faq-btn');
+            allBtns.forEach(otherBtn => {
+                if (otherBtn !== newBtn) {
+                    otherBtn.nextElementSibling.classList.add('hidden');
+                    const otherIcon = otherBtn.querySelector('.faq-icon');
+                    if (otherIcon) otherIcon.className = 'fas fa-plus text-gray-400 faq-icon';
+                    otherBtn.classList.remove('bg-gray-50');
+                    otherBtn.classList.add('bg-white');
+                }
+            });
+
+            // Toggle current FAQ
+            content.classList.toggle('hidden');
+
+            if (content.classList.contains('hidden')) {
+                if (icon) icon.className = 'fas fa-plus text-gray-400 faq-icon';
+                newBtn.classList.remove('bg-gray-50');
+                newBtn.classList.add('bg-white');
+            } else {
+                if (icon) icon.className = 'fas fa-minus text-primary-red faq-icon';
+                newBtn.classList.add('bg-gray-50');
+                newBtn.classList.remove('bg-white');
+            }
+        });
+    });
+}
+
+// Call initFAQ when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFAQ);
+} else {
+    initFAQ();
+}
