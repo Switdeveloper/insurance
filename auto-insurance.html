@@ -38,8 +38,8 @@
         
         /* FAQ Accordion */
         .faq-btn { cursor: pointer; }
-        .faq-content { display: none; }
-        .faq-content.active { display: block; }
+        .faq-content.hidden { display: none; }
+        .faq-content:not(.hidden) { display: block; }
         
         .btn-primary {
             background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
@@ -428,17 +428,15 @@
     </section>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // FAQ Accordion
-            document.querySelectorAll('.faq-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const content = btn.nextElementSibling;
-                    const icon = btn.querySelector('i');
-                    content.classList.toggle('hidden');
-                    icon.classList.toggle('text-primary-red');
-                    icon.classList.toggle('text-gray-400');
-                    icon.classList.toggle('rotate-180');
-                });
+        // FAQ Accordion
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('text-primary-red');
+                icon.classList.toggle('text-gray-400');
+                icon.classList.toggle('rotate-180');
             });
         });
     </script>
