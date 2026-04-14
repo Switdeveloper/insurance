@@ -350,7 +350,7 @@
             
             <div class="space-y-4 text-left bg-white rounded-2xl p-6 md:p-8">
                 <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
-                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition" onclick="toggleFaq(this)">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition">
                         <span>What information do I need to get a quote?</span>
                         <i class="fas fa-chevron-down text-primary-red transform transition-transform"></i>
                     </button>
@@ -360,7 +360,7 @@
                 </div>
                 
                 <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
-                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition" onclick="toggleFaq(this)">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition" onclick>
                         <span>How much can I save on auto insurance?</span>
                         <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
                     </button>
@@ -370,7 +370,7 @@
                 </div>
                 
                 <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
-                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition" onclick="toggleFaq(this)">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition">
                         <span>Do you offer SR-22 insurance?</span>
                         <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
                     </button>
@@ -380,7 +380,7 @@
                 </div>
                 
                 <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
-                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition" onclick="toggleFaq(this)">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition" onclick>
                         <span>Can I add multiple vehicles to my policy?</span>
                         <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
                     </button>
@@ -390,7 +390,7 @@
                 </div>
                 
                 <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
-                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition" onclick="toggleFaq(this)">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition" onclick>
                         <span>How long does it take to get insured?</span>
                         <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
                     </button>
@@ -428,14 +428,19 @@
     </section>
 
     <script>
-        function toggleFaq(btn) {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('i');
-            content.classList.toggle('hidden');
-            icon.classList.toggle('text-primary-red');
-            icon.classList.toggle('text-gray-400');
-            icon.classList.toggle('rotate-180');
-        }
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion
+            document.querySelectorAll('.faq-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('text-primary-red');
+                    icon.classList.toggle('text-gray-400');
+                    icon.classList.toggle('rotate-180');
+                });
+            });
+        });
     </script>
 
     <div id="footer-container"></div>
