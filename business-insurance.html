@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Insurance in Florida - Freedman Insurance</title>
+    <title>Business Insurance in Florida - Freedman Insurance Agency</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'dark-blue': '#0a0f24',
-                        'primary-red': '#b71c1c',
-                        'light-red': '#ff9b9b',
-                        'accent-orange': '#ff7a7a'
+                        'dark-blue': '#062a4a',
+                        'primary-red': '#e63946',
+                        'secondary-blue': '#1d3557',
+                        'accent-gold': '#d4a373',
                     },
                     fontFamily: {
                         'serif': ['Playfair Display', 'serif'],
@@ -24,412 +24,417 @@
         }
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; color: #333; }
+        body { font-family: 'Inter', sans-serif; color: #333; margin: 0; padding: 0; }
         h1, h2, h3, h4, h5, h6, .serif { font-family: 'Playfair Display', serif; }
+        .bg-dark-blue { background-color: #062a4a; }
+        .text-dark-blue { color: #062a4a; }
+        .bg-primary-red { background-color: #e63946; }
+        .text-primary-red { color: #e63946; }
+        .hover\:bg-red-800:hover { background-color: #c1121f; }
+        
+        .faq-btn { cursor: pointer; }
+        .faq-content.hidden { display: none; }
+        .faq-content:not(.hidden) { display: block; }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+        }
     </style>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<script src="js/load-partials.js"></script>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="js/load-partials.js"></script>
 </head>
 <body class="overflow-x-hidden">
 
     <div id="header-container"></div>
 
-<section class="relative pt-24 pb-48 overflow-hidden bg-dark-blue">
-    <!-- Background image -->
-    <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop" alt="Commercial Building" class="w-full h-full object-cover object-center opacity-40">
-        <div class="absolute inset-0 bg-gradient-to-r from-[#0a0f24] via-[#0a0f24]/80 to-transparent"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-4 relative z-10">
-        <div class="max-w-2xl text-white">
-            <div class="flex items-center text-xs text-gray-400 mb-8">
-                <a href="index.html" class="hover:text-white transition">Home</a> <span class="mx-2">/</span> <span class="text-white">Business Insurance</span>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-dark-blue via-[#0a1f35] to-dark-blue pt-24 pb-32 overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-primary-red/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-20 w-96 h-96 bg-accent-gold/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Business Background" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="inline-flex items-center bg-primary-red/20 border border-primary-red/30 rounded-full px-4 py-2 mb-6">
+                        <span class="w-2 h-2 bg-primary-red rounded-full mr-2 animate-pulse"></span>
+                        <span class="text-sm font-medium text-primary-red">Florida's #1 Business Insurance</span>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight serif">
+                        Get the Best<br>
+                        <span class="text-primary-red">Business Insurance</span> Rates
+                    </h1>
+                    
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                        Compare rates from 40+ top carriers. Florida businesses save an average of <strong class="text-white">$2,000/year</strong> with us.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <a href="#" class="btn-primary text-white px-8 py-4 rounded-lg font-bold text-lg inline-flex items-center">
+                            Get Free Quote <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="tel:17272301000" class="bg-white/10 backdrop-blur border border-white/20 text-white px-8 py-4 rounded-lg font-bold text-lg inline-flex items-center hover:bg-white/20 transition">
+                            <i class="fas fa-phone-alt mr-2"></i> Call Now
+                        </a>
+                    </div>
+                    
+                    <div class="flex flex-wrap items-center gap-6 text-sm">
+                        <div class="flex items-center">
+                            <div class="bg-primary-red/20 p-2 rounded-lg mr-3">
+                                <i class="fas fa-shield-alt text-primary-red"></i>
+                            </div>
+                            <span class="text-gray-300">Licensed in FL</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-primary-red/20 p-2 rounded-lg mr-3">
+                                <i class="fas fa-users text-primary-red"></i>
+                            </div>
+                            <span class="text-gray-300">50K+ Clients</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-primary-red/20 p-2 rounded-lg mr-3">
+                                <i class="fas fa-star text-primary-red"></i>
+                            </div>
+                            <span class="text-gray-300">4.9 Rating</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary-red">40+</div>
+                        <div class="text-gray-400 text-sm">Carriers</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary-red">$2,000</div>
+                        <div class="text-gray-400 text-sm">Avg Savings</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary-red">50K+</div>
+                        <div class="text-gray-400 text-sm">Clients</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-primary-red">4.9</div>
+                        <div class="text-gray-400 text-sm">Rating</div>
+                    </div>
+                </div>
             </div>
-
-            <div class="flex items-center text-sm font-medium text-white mb-6">
-                <i class="fas fa-shield-alt text-primary-red mr-2"></i>
-                <span class="text-primary-red">Protect Your Florida Business</span>
+        </div>
+    </section>
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center bg-primary-red/10 border border-primary-red/20 rounded-full px-6 py-3 mb-6">
+                <i class="fas fa-building text-primary-red mr-2"></i>
+                <span class="text-sm font-bold text-primary-red uppercase tracking-wider">Business Coverage Options</span>
             </div>
-
-            <h1 class="text-5xl md:text-6xl lg:text-[70px] font-bold mb-4 leading-tight serif">
-                Business Insurance<br>
-                <span class="text-accent-orange">in Florida</span>
-            </h1>
-
-            <p class="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light">
-                Freedman Insurance Insurance has been protecting Florida businesses since 2014. From general liability to workers' compensation, we compare top commercial carriers to find the right coverage at the best price for your business.
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 serif text-dark-blue">Complete Business Protection</h2>
+            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+                We offer comprehensive coverage options tailored to your business needs
             </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition p-6">
+                    <div class="w-14 h-14 bg-primary-red/10 rounded-xl flex items-center justify-center text-primary-red mb-4">
+                        <i class="fas fa-briefcase text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-blue mb-2">General Liability</h3>
+                    <p class="text-gray-600 text-sm">Protects against third-party claims for injuries and property damage.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition p-6">
+                    <div class="w-14 h-14 bg-primary-red/10 rounded-xl flex items-center justify-center text-primary-red mb-4">
+                        <i class="fas fa-hard-hat text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-blue mb-2">Workers Compensation</h3>
+                    <p class="text-gray-600 text-sm">Required in Florida. Covers employee injuries and medical costs.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition p-6">
+                    <div class="w-14 h-14 bg-primary-red/10 rounded-xl flex items-center justify-center text-primary-red mb-4">
+                        <i class="fas fa-store text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-blue mb-2">Commercial Property</h3>
+                    <p class="text-gray-600 text-sm">Protects your building, equipment, and inventory.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden group hover:shadow-md transition p-6">
+                    <div class="w-14 h-14 bg-primary-red/10 rounded-xl flex items-center justify-center text-primary-red mb-4">
+                        <i class="fas fa-car text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark-blue mb-2">Commercial Auto</h3>
+                    <p class="text-gray-600 text-sm">Covers company vehicles and business driving needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <div class="flex flex-wrap gap-4 mb-10">
-                <a href="#" class="bg-primary-red text-white px-8 py-4 rounded font-bold hover:bg-red-800 transition inline-flex items-center justify-center text-lg">
-                    Get a Free Quote <i class="fas fa-arrow-right ml-2 text-sm"></i>
+    <!-- Why Choose Us -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center bg-primary-red/10 border border-primary-red/20 rounded-full px-6 py-3 mb-6">
+                        <i class="fas fa-check-circle text-primary-red mr-2"></i>
+                        <span class="text-sm font-bold text-primary-red uppercase tracking-wider">Why Choose Us</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 serif text-dark-blue">Florida's Trusted Business Insurance Agency</h2>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        We've helped over 50,000 Florida businesses find the best rates on insurance. Our licensed agents compare 40+ carriers to save you money.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-red/10 rounded-full flex items-center justify-center text-primary-red mr-4 flex-shrink-0">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-blue">Save Up to $2,000/Year</h4>
+                                <p class="text-gray-600 text-sm">We compare 40+ carriers to find you the lowest rate.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-red/10 rounded-full flex items-center justify-center text-primary-red mr-4 flex-shrink-0">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-blue">Instant Online Quotes</h4>
+                                <p class="text-gray-600 text-sm">Get your quote in 2 minutes. No hidden fees.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-red/10 rounded-full flex items-center justify-center text-primary-red mr-4 flex-shrink-0">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-blue">Local Florida Agents</h4>
+                                <p class="text-gray-600 text-sm">Licensed in all 67 counties. We speak English & Spanish.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-primary-red/10 rounded-full flex items-center justify-center text-primary-red mr-4 flex-shrink-0">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark-blue">Claims Support</h4>
+                                <p class="text-gray-600 text-sm">Dedicated claims team available 24/7 when you need us.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-dark-blue rounded-xl p-6 text-center">
+                        <div class="text-4xl font-bold text-primary-red mb-2">40+</div>
+                        <div class="text-white text-sm">Carriers Compared</div>
+                    </div>
+                    <div class="bg-dark-blue rounded-xl p-6 text-center">
+                        <div class="text-4xl font-bold text-primary-red mb-2">$2,000</div>
+                        <div class="text-white text-sm">Avg. Annual Savings</div>
+                    </div>
+                    <div class="bg-dark-blue rounded-xl p-6 text-center">
+                        <div class="text-4xl font-bold text-primary-red mb-2">50K+</div>
+                        <div class="text-white text-sm">Happy Clients</div>
+                    </div>
+                    <div class="bg-dark-blue rounded-xl p-6 text-center">
+                        <div class="text-4xl font-bold text-primary-red mb-2">100+</div>
+                        <div class="text-white text-sm">FL Locations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-dark-blue text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center bg-primary-red/20 border border-primary-red/30 rounded-full px-6 py-3 mb-6">
+                    <i class="fas fa-star text-primary-red mr-2"></i>
+                    <span class="text-sm font-bold text-primary-red uppercase tracking-wider">Client Reviews</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">What Our Clients Say</h2>
+                <div class="flex justify-center items-center mt-4">
+                    <div class="flex text-yellow-400 text-xl mr-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span class="font-bold text-white text-lg">4.9/5</span>
+                    <span class="text-gray-400 mx-2">from</span>
+                    <span class="font-bold text-white">10,000+ Google Reviews</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">
+                        "Saved over $1,500 on my business insurance! The agent was helpful and found me a great rate. Highly recommend!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">MJ</div>
+                        <div>
+                            <div class="font-bold text-white">Michael J.</div>
+                            <div class="text-xs text-gray-400">Miami, FL</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">
+                        "First time buying insurance and they made it so easy. Got a great rate and the process was smooth."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">SK</div>
+                        <div>
+                            <div class="font-bold text-white">Sarah K.</div>
+                            <div class="text-xs text-gray-400">Orlando, FL</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-6 leading-relaxed">
+                        "Been with them for 3 years. Always great rates and excellent service. They really care about their clients!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary-red rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">DR</div>
+                        <div>
+                            <div class="font-bold text-white">David R.</div>
+                            <div class="text-xs text-gray-400">Tampa, FL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="inline-flex items-center justify-center bg-primary-red/10 border border-primary-red/20 rounded-full px-6 py-3 mb-6">
+                <i class="fas fa-question-circle text-primary-red mr-2"></i>
+                <span class="text-sm font-bold text-primary-red uppercase tracking-wider">Frequently Asked Questions</span>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 serif text-dark-blue">Got Questions?</h2>
+            <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+                Find quick answers to common questions about business insurance
+            </p>
+            
+            <div class="space-y-4 text-left bg-white rounded-2xl p-6 md:p-8">
+                <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition">
+                        <span>What insurance does my business need in Florida?</span>
+                        <i class="fas fa-chevron-down text-primary-red transform transition-transform"></i>
+                    </button>
+                    <div class="faq-content p-5 bg-white text-gray-600 text-sm border-t border-gray-100">
+                        Florida requires workers compensation insurance for employees. Most businesses need general liability. We can help assess your specific needs!
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition">
+                        <span>How much can I save on business insurance?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
+                    </button>
+                    <div class="faq-content p-5 bg-white text-gray-600 text-sm border-t border-gray-100">
+                        Florida businesses save an average of $2,000/year with us. Savings depend on your industry, size, and coverage needs.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100 transition">
+                        <span>What affects my business insurance rates?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
+                    </button>
+                    <div class="faq-content p-5 bg-white text-gray-600 text-sm border-t border-gray-100">
+                        Your rates are based on industry type, number of employees, revenue, claims history, and coverage needs. We help find the best rate!
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100transition">
+                        <span>Do I need workers comp insurance?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
+                    </button>
+                    <div class="faq-content p-5 bg-white text-gray-600 text-sm border-t border-gray-100">
+                        Yes! Florida requires workers compensation for businesses with 4+ employees (some exceptions apply). We can help you stay compliant!
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50">
+                    <button class="faq-btn w-full flex justify-between items-center p-5 font-bold text-gray-800 hover:bg-gray-100transition">
+                        <span>How long does it take to get insured?</span>
+                        <i class="fas fa-chevron-down text-gray-400 transform transition-transform"></i>
+                    </button>
+                    <div class="faq-content p-5 bg-white text-gray-600 text-sm border-t border-gray-100">
+                        Most policies are issued the same day! Once you accept your quote, you can get proof of insurance immediately.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 p-6 bg-dark-blue rounded-xl text-white">
+                <p class="font-medium mb-4">Still have questions?</p>
+                <a href="contact.html" class="inline-flex items-center bg-primary-red px-8 py-3 rounded-lg font-bold hover:bg-red-700 transition">
+                    Contact Us <i class="fas fa-arrow-right ml-2"></i>
                 </a>
-                <a href="tel:7865012059" class="bg-transparent border border-gray-500 text-white px-8 py-4 rounded font-bold hover:bg-white/10 transition inline-flex items-center justify-center text-lg">
-                    <i class="fas fa-phone-alt mr-2 text-sm"></i> (786) 501-2059
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-red text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 serif">Ready to Save Money?</h2>
+            <p class="text-white/90 mb-8 max-w-2xl mx-auto">
+                Get your free business insurance quote today and see how much you could save!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#" class="bg-white text-primary-red px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                    Get Free Quote
+                </a>
+                <a href="tel:17272301000" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition">
+                    <i class="fas fa-phone-alt mr-2"></i> Call 1-727-230-1000
                 </a>
             </div>
-
-            <div class="inline-flex items-center bg-yellow-900/40 rounded-full px-5 py-2.5 border border-yellow-700/50">
-                <i class="fas fa-star text-yellow-500 text-sm mr-2"></i>
-                <span class="text-sm font-semibold text-yellow-500">Trusted by 300K+ Florida businesses & families</span>
-            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Angled white border at bottom -->
-    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-        <svg class="relative block w-full h-[80px] md:h-[120px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M1200 120L0 120 0 0 1200 120z" class="fill-white"></path>
-        </svg>
-    </div>
-</section>
+    <script>
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('text-primary-red');
+                icon.classList.toggle('text-gray-400');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+    </script>
 
-<!-- Why Choose Section -->
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-dark-blue serif">Why Choose Freedman Insurance for Business Insurance?</h2>
-            <p class="text-gray-600 text-lg">We compare 40+ top carriers to find you the best rate and coverage — at no extra cost.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- 1 -->
-            <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm flex flex-col items-start">
-                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-6 text-primary-red">
-                    <i class="far fa-check-circle text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-dark-blue serif">General Liability Coverage</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Protect your business from third-party claims of bodily injury, property damage, and advertising injury.
-                </p>
-            </div>
-
-            <!-- 2 -->
-            <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm flex flex-col items-start">
-                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-6 text-primary-red">
-                    <i class="far fa-check-circle text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-dark-blue serif">Workers' Compensation</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Required for most Florida businesses with 4+ employees. We find competitive rates for all industries.
-                </p>
-            </div>
-
-            <!-- 3 -->
-            <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm flex flex-col items-start">
-                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-6 text-primary-red">
-                    <i class="far fa-check-circle text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-dark-blue serif">Commercial Auto Insurance</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Cover your business vehicles, delivery fleets, and employee-driven vehicles with commercial auto policies.
-                </p>
-            </div>
-
-            <!-- 4 -->
-            <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm flex flex-col items-start">
-                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-6 text-primary-red">
-                    <i class="far fa-check-circle text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-dark-blue serif">Business Owner's Policy (BOP)</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Bundle general liability and commercial property into one affordable policy — ideal for small businesses.
-                </p>
-            </div>
-
-            <!-- 5 -->
-            <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm flex flex-col items-start">
-                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-6 text-primary-red">
-                    <i class="far fa-check-circle text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-dark-blue serif">Professional Liability (E&O)</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Protect your professional services business from claims of negligence, errors, and omissions.
-                </p>
-            </div>
-
-            <!-- 6 -->
-            <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm flex flex-col items-start">
-                <div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-6 text-primary-red">
-                    <i class="far fa-check-circle text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3 text-dark-blue serif">Industry Specialists</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    We serve contractors, restaurants, retail stores, trucking companies, healthcare providers, and more.
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- What Does Business Insurance Cover -->
-<section class="py-20 bg-gray-50">
-    <div class="max-w-5xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-bold text-dark-blue serif">What Does Business Insurance Cover?</h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">General Liability Insurance</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Workers' Compensation</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Commercial Auto Insurance</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Business Owner's Policy (BOP)</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Commercial Property Insurance</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Professional Liability (E&O)</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Directors & Officers (D&O)</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Cyber Liability Insurance</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Commercial Umbrella Insurance</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Inland Marine Insurance</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Liquor Liability Insurance</span>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-lg p-5 flex items-center">
-                <i class="far fa-check-circle text-primary-red text-xl mr-4"></i>
-                <span class="font-medium text-gray-800">Product Liability Insurance</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-bold text-dark-blue serif">Frequently Asked Questions</h2>
-        </div>
-
-        <div class="space-y-4">
-            <!-- FAQ 1 -->
-            <div class="border border-gray-200 rounded-lg shadow-sm">
-                <button class="w-full text-left px-6 py-5 text-base font-semibold text-gray-800 flex justify-between items-center focus:outline-none">
-                    Is business insurance required in Florida?
-                    <div class="w-6 h-6 bg-primary-red text-white rounded-full flex items-center justify-center shrink-0 ml-4">
-                        <i class="fas fa-plus text-xs"></i>
-                    </div>
-                </button>
-            </div>
-
-            <!-- FAQ 2 -->
-            <div class="border border-gray-200 rounded-lg shadow-sm">
-                <button class="w-full text-left px-6 py-5 text-base font-semibold text-gray-800 flex justify-between items-center focus:outline-none">
-                    How much does business insurance cost in Florida?
-                    <div class="w-6 h-6 bg-primary-red text-white rounded-full flex items-center justify-center shrink-0 ml-4">
-                        <i class="fas fa-plus text-xs"></i>
-                    </div>
-                </button>
-            </div>
-
-            <!-- FAQ 3 -->
-            <div class="border border-gray-200 rounded-lg shadow-sm">
-                <button class="w-full text-left px-6 py-5 text-base font-semibold text-gray-800 flex justify-between items-center focus:outline-none">
-                    What is a Business Owner's Policy (BOP)?
-                    <div class="w-6 h-6 bg-primary-red text-white rounded-full flex items-center justify-center shrink-0 ml-4">
-                        <i class="fas fa-plus text-xs"></i>
-                    </div>
-                </button>
-            </div>
-
-            <!-- FAQ 4 -->
-            <div class="border border-gray-200 rounded-lg shadow-sm">
-                <button class="w-full text-left px-6 py-5 text-base font-semibold text-gray-800 flex justify-between items-center focus:outline-none">
-                    Do I need workers' compensation in Florida?
-                    <div class="w-6 h-6 bg-primary-red text-white rounded-full flex items-center justify-center shrink-0 ml-4">
-                        <i class="fas fa-plus text-xs"></i>
-                    </div>
-                </button>
-            </div>
-
-            <!-- FAQ 5 -->
-            <div class="border border-gray-200 rounded-lg shadow-sm">
-                <button class="w-full text-left px-6 py-5 text-base font-semibold text-gray-800 flex justify-between items-center focus:outline-none">
-                    Does Freedman Insurance serve contractors and construction companies?
-                    <div class="w-6 h-6 bg-primary-red text-white rounded-full flex items-center justify-center shrink-0 ml-4">
-                        <i class="fas fa-plus text-xs"></i>
-                    </div>
-                </button>
-            </div>
-
-            <!-- FAQ 6 -->
-            <div class="border border-gray-200 rounded-lg shadow-sm">
-                <button class="w-full text-left px-6 py-5 text-base font-semibold text-gray-800 flex justify-between items-center focus:outline-none">
-                    Can I get same-day business insurance?
-                    <div class="w-6 h-6 bg-primary-red text-white rounded-full flex items-center justify-center shrink-0 ml-4">
-                        <i class="fas fa-plus text-xs"></i>
-                    </div>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="py-24 bg-dark-blue relative text-center text-white">
-    <div class="max-w-4xl mx-auto px-4 relative z-10">
-        <h2 class="text-4xl md:text-[50px] font-bold mb-6 serif leading-tight">Protect Your Business Today</h2>
-        <p class="text-gray-300 text-lg mb-10 max-w-2xl mx-auto font-light">
-            Get a free commercial insurance quote from a licensed Florida business insurance specialist.
-        </p>
-
-        <div class="flex flex-wrap justify-center gap-4 mb-8">
-            <a href="#" class="bg-primary-red text-white px-8 py-4 rounded font-bold hover:bg-red-800 transition inline-flex items-center justify-center text-lg">
-                Get a Free Quote <i class="fas fa-arrow-right ml-2 text-sm"></i>
-            </a>
-            <a href="tel:7865012059" class="bg-transparent border border-gray-500 text-white px-8 py-4 rounded font-bold hover:bg-white/10 transition inline-flex items-center justify-center text-lg">
-                <i class="fas fa-phone-alt mr-2 text-sm"></i> (786) 501-2059
-            </a>
-        </div>
-
-        <p class="text-xs text-gray-400">
-            No obligation • 100% free • Licensed agents across Florida • Bilingual (English/Spanish)
-        </p>
-    </div>
-</section>
-
-<!-- Footer -->
-<!-- <footer class="bg-[#050814] text-white pt-20 pb-8 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
-            <!-- Brand -->
-            <div class="lg:col-span-2 pr-8">
-                <div class="mb-6 bg-white w-24 h-12 flex items-center justify-center rounded-sm">
-                    <span class="text-[10px] font-bold text-gray-900 tracking-wider">LOGO</span>
-                </div>
-                <p class="text-gray-400 text-sm mb-8 leading-relaxed max-w-sm font-light">
-                    Freedman Insurance Insurance Agency — serving Florida families and businesses since 2014. Over $500M in premiums bound. 300,000+ customers helped. Licensed in all 67 Florida counties. Bilingual agents available (English/Spanish).
-                </p>
-
-                <div class="space-y-4 mb-8 font-light text-sm text-gray-400">
-                    <div class="flex items-center">
-                        <i class="fas fa-phone-alt w-6 text-primary-red"></i>
-                        <span>(786) 501-2059</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope w-6 text-primary-red"></i>
-                        <span>info@floneinsurance.com</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt w-6 text-primary-red"></i>
-                        <span>100+ Locations — Kendall to Jacksonville</span>
-                    </div>
-                </div>
-
-                <div class="flex space-x-3">
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary-red hover:text-white transition"><i class="fab fa-facebook-f text-sm"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary-red hover:text-white transition"><i class="fab fa-instagram text-sm"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary-red hover:text-white transition"><i class="fas fa-link text-sm"></i></a>
-                </div>
-            </div>
-
-            <!-- Get Insurance -->
-            <div>
-                <h4 class="font-bold text-xs mb-6 text-primary-red tracking-widest uppercase">GET INSURANCE</h4>
-                <ul class="space-y-4 text-sm text-gray-400 font-light">
-                    <li><a href="auto-insurance.html" class="hover:text-white transition">Auto Insurance</a></li>
-                    <li><a href="home-insurance.html" class="hover:text-white transition">Home Insurance</a></li>
-                    <li><a href="#" class="hover:text-white transition">Life Insurance</a></li>
-                    <li><a href="business-insurance.html" class="hover:text-white transition">Business Insurance</a></li>
-                    <li><a href="#" class="hover:text-white transition">Flood Insurance</a></li>
-                    <li><a href="#" class="hover:text-white transition">Motorcycle Insurance</a></li>
-                    <li><a href="#" class="hover:text-white transition">Renters Insurance</a></li>
-                    <li><a href="#" class="hover:text-white transition">SR-22 Insurance</a></li>
-                </ul>
-            </div>
-
-            <!-- Company -->
-            <div>
-                <h4 class="font-bold text-xs mb-6 text-primary-red tracking-widest uppercase">COMPANY</h4>
-                <ul class="space-y-4 text-sm text-gray-400 font-light">
-                    <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-                    <li><a href="locations.html" class="hover:text-white transition">Locations</a></li>
-                    <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
-                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-                </ul>
-            </div>
-
-            <!-- Service Areas -->
-            <div>
-                <h4 class="font-bold text-xs mb-6 text-primary-red tracking-widest uppercase">SERVICE AREAS</h4>
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Miami</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Hialeah</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Kendall</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Miami Lakes</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Doral</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Homestead</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Fort Lauderdale</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Hollywood</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Miramar</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Pembroke Pines</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Orlando</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Tampa</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Jacksonville</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">West Palm Beach</span>
-                    <span class="px-3 py-1.5 bg-[#11172a] rounded-full text-xs text-gray-400 border border-white/5">Kissimmee</span>
-                </div>
-                <a href="#" class="text-xs text-primary-red hover:text-red-400 transition">View all 100+ locations →</a>
-            </div>
-        </div>
-
-        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-light">
-            <p>&copy; 2014-2026 Freedman Insurance Insurance Agency, LLC. All rights reserved. Licensed by the Florida Department of Financial Services. License #L093066.</p>
-            <div class="mt-4 md:mt-0 space-x-6">
-                <a href="#" class="hover:text-gray-300">Privacy Policy</a>
-                <a href="#" class="hover:text-gray-300">Contact Us</a>
-            </div>
-        </div>
-    </div>
-</footer> -->
-
-<script>
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        const icon = mobileMenuBtn.querySelector('i');
-        if (mobileMenu.classList.contains('hidden')) {
-            icon.className = 'fas fa-bars';
-        } else {
-            icon.className = 'fas fa-times';
-        }
-    });
-}
-</script>
     <div id="footer-container"></div>
 </body>
 </html>
