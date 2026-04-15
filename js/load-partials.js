@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 });
+
 // Initialize FAQ Accordions if they exist on the page
 function initFAQ() {
     const faqBtns = document.querySelectorAll('.faq-btn');
